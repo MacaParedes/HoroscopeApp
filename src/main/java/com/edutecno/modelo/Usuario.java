@@ -1,2 +1,4 @@
-package com.edutecno.modelo;public class Usuario {
+package com.edutecno.modelo;
+
+public class Usuario {
 }

@@ -1,4 +1,4 @@
-package com.edutecno.horoscopeapp;
+package com.edutecno.servlets;
 
 import java.io.*;
 
