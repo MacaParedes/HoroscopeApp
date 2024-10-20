@@ -1,0 +1,27 @@
+/* Footer sticky */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Oxygen", serif;
+
+}
+
+main {
+    flex: 1; /* Hace que el main ocupe todo el espacio disponible */
+}
+
+footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Asegura que el footer esté en el flujo del documento */
+    bottom: 0;
+    flex-shrink: 0; /* Evita que el footer se reduzca */
+}
+
+
