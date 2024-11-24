@@ -6,7 +6,7 @@
     <title>Tu Horóscopo Chino</title>
 </head>
 <body>
-<h2>Hoórscopo chinoòòóó</h2>
+<h2>Hoscopo chino</h2>
 <p>Consulta tu horóscopo aquí.</p>
 </body>
 </html>
