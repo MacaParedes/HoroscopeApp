@@ -7,6 +7,7 @@
 </head>
 <body>
 <h2>Hoscopo chino</h2>
-<p>Consulta tu horóscopo aquí.</p>
+<p>Conoce a tu animal del hóroscopo chino.</p>
+<p>Tu animal es </p>
 </body>
 </html>

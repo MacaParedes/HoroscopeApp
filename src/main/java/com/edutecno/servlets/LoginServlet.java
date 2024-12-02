@@ -1,6 +1,7 @@
 package com.edutecno.servlets;
 
 import com.edutecno.dao.UsuarioDAO;
+import com.edutecno.dao.UsuarioDAOImpl;
 import com.edutecno.modelo.Usuario;
 import com.edutecno.procesaconexion.DatabaseConnection;
 import jakarta.servlet.ServletException;
@@ -17,12 +18,14 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
 
-    // Ejemplo de usuario y contraseña (se puede reemplazar con validación de base de datos)
-    private static final String USERNAME = "usuarioDemo";
-    private static final String PASSWORD = "password123";
-
     private static final Logger log = LoggerFactory.getLogger(LoginServlet.class);
 
+    private UsuarioDAO usuarioDAO;
+
+    @Override
+    public void init() throws ServletException {
+        usuarioDAO = new UsuarioDAOImpl();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +43,6 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
         Usuario user = usuarioDAO.validateUser(username, password);
 
         var usuarios =  usuarioDAO.getUsuarios();
@@ -49,7 +51,7 @@ public class LoginServlet extends HttpServlet {
             // User is authenticated, create session
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            response.sendRedirect("horoscope.jsp"); // Redirect to the Chinese horoscope page
+            response.sendRedirect("menu.jsp"); // Redirect to the menu page
         } else {
             // Invalid login, send back to login.jsp with an error message
             request.setAttribute("errorMessage", "Invalid username or password.");

@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Barra de navegación -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <a class="navbar-brand" href="#">Horóscopo Chino</a>
     <div> Tu Horóscopo chino</div>
@@ -30,54 +28,51 @@
     </div>
 </nav>
 
-<!-- Encabezado -->
-<header class="text-center m-0">
-
-</header>
-
-<!-- Contenido principal -->
+<header class="text-center m-0"></header>
 <main class="main-container">
-    <div class="card">
-        <div class="card-body">
-            <h3 class="text-justify ">Inicia sesión</h3>
-            <p class="text-justify">Es necesario que inicies sesión para revisar tu horóscopo chino. Si todavía no tienes cuenta, haz click <a href="register.jsp">aquí</a>.</p>
-
-            <form action="login" method="post">
-                <div class="form-group row">
-                    <label for="username" class="col-sm-4 col-form-label">Nombre de usuario:</label>
-                    <div class="col-sm-4">
-                        <input type="text" id="username" name="username" class="form-control" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="password" class="col-sm-4 col-form-label">Contraseña:</label>
-                    <div class="col-sm-4">
-                        <input type="password" id="password" name="password" class="form-control" required>
-                    </div>
-
-                </div>
-                <div class="form-group row">
-
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-custom bg-info text-white">Ingresar</button>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </div>
-            </form>
-
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <a href="horoscope" class="btn btn-custom bg-info text-white">Conoce tu animal</a>
+        </div>
+        <div class="col-auto">
+            <a href="register.jsp" class="btn btn-custom bg-info text-white">Regístrate</a>
+        </div>
+        <div class="col-auto">
+            <a href="searchUser" class="btn btn-custom bg-info text-white">Buscar usuarios</a>
+        </div>
+        <div class="col-auto">
+            <a href="modifyUser" class="btn btn-custom bg-info text-white">Modificar datos</a>
+        </div>
+        <div class="col-auto">
+            <a href="deleteUser" class="btn btn-custom bg-info text-white">Eliminar cuenta</a>
         </div>
     </div>
 </main>
 
-<!-- Pie de página -->
+<main class="main-container">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <button type="submit" class="btn btn-custom bg-info text-white">Conoce tu animal</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-custom bg-info text-white">Buscar usuarios</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-custom bg-info text-white">Modificar datos</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-custom bg-info text-white">Eliminar cuenta</button>
+        </div>
+    </div>
+</main>
+
+
 <footer>
     <p>&copy; 2024 Horóscopo Chino. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Scripts de Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>

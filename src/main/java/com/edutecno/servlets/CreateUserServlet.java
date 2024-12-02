@@ -1,7 +1,9 @@
 package com.edutecno.servlets;
 
 import com.edutecno.dao.UsuarioDAO;
+import com.edutecno.dao.UsuarioDAOImpl;
 import com.edutecno.modelo.Usuario;
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +15,13 @@ import java.io.IOException;
 @WebServlet(name = "CreateUserServlet", value = "/register")
 public class CreateUserServlet extends HttpServlet {
 
+    private UsuarioDAO usuarioDAO;
+
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        usuarioDAO = new UsuarioDAOImpl();
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -27,10 +36,9 @@ public class CreateUserServlet extends HttpServlet {
         user.setNombre(nombre);
         user.setUsername(username);
         user.setEmail(email);
-        user.setFechaNacimiento(java.sql.Date.valueOf(fechaNacimiento)); // Convert to SQL Date
+        user.setFechaNacimiento(java.sql.Date.valueOf(fechaNacimiento));
         user.setPassword(password);
 
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
         boolean isRegistered = usuarioDAO.createUser(user);
 
         if (isRegistered) {
