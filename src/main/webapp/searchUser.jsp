@@ -25,7 +25,6 @@
 <!-- Results Section -->
 <div class="container mt-4">
     <h2 class="text-center">Resultados</h2>
-    <p>Usuarios List: ${usuarios}</p>
     <c:if test="${empty usuarios}">
         <p class="text-center">No se encontraron usuarios.</p>
     </c:if>

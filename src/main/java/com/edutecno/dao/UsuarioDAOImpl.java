@@ -149,8 +149,65 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         return false;
     }
 
+    @Override
+    public boolean updateUser(Usuario user) {
+        String query = "UPDATE USUARIOS SET nombre = ?, username = ?, email = ? WHERE id = ?";
+        int rowsUpdated = 0;
+
+        try (Connection conn = DatabaseConnection.generaPoolConexion();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            // Log query and parameters
+            System.out.println("Executing query: " + query);
+            System.out.println("Parameters: nombre=" + user.getNombre() + ", username=" + user.getUsername() + ", email=" + user.getEmail() + ", id=" + user.getId());
+
+            // Set parameters in the query
+            ps.setString(1, user.getNombre());
+            ps.setString(2, user.getUsername());
+            ps.setString(3, user.getEmail());
+            ps.setInt(4, Integer.parseInt(user.getId())); // Parse ID as integer since `id` is SERIAL
+
+            // Execute the update
+            rowsUpdated = ps.executeUpdate();
+
+            // Log the result
+            System.out.println("Rows updated: " + rowsUpdated);
+        } catch (Exception e) {
+            // Log any errors
+            System.err.println("Error updating user: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return rowsUpdated > 0; // Return true if at least one row was updated
+    }
 
 
+
+    @Override
+    public Usuario getUserById(String id) {
+        Usuario user = null;
+        String query = "SELECT id, nombre, username, email FROM usuarios WHERE id = ?";
+
+        try (Connection conn = DatabaseConnection.generaPoolConexion();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    user = new Usuario(
+                            rs.getString("id"),
+                            rs.getString("nombre"),
+                            rs.getString("username"),
+                            rs.getString("email")
+                    );
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return user;
+    }
 
 
 

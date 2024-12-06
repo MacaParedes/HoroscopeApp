@@ -34,7 +34,7 @@
     <div class="row justify-content-center">
         <div class="col-auto">
             <form action="horoscope" method="post">
-                <button type="submit">Conoce tu animal</button>
+                <button type="submit" class="btn btn-info">Conoce tu animal</button>
             </form>
         </div>
         <div class="col-auto">
