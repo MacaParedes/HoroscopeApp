@@ -31,7 +31,7 @@ public class DeleteUserServlet extends HttpServlet {
             throws ServletException, IOException {
         List<Usuario> users = usuarioDAO.getUsuarios();
         System.out.println(" USERS {}" + users);
-        request.setAttribute("users", users);
+        request.setAttribute("usuarios", users);
 
         request.getRequestDispatcher("deleteUser.jsp").forward(request, response);
     }

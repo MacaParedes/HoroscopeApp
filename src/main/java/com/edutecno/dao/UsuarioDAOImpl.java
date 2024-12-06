@@ -26,13 +26,22 @@ public class UsuarioDAOImpl implements UsuarioDAO {
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {  // Iterate over the ResultSet rows
-                String user = rs.getString("USERNAME");
+                Usuario user = new Usuario(
+                        rs.getString("ID"),
+                        rs.getString("NOMBRE"),
+                        rs.getString("USERNAME"),
+                        rs.getString("EMAIL"),
+                        rs.getDate("FECHA_NACIMIENTO"),
+                        rs.getString("PASSWORD"),
+                        rs.getString("ANIMAL")
+                );
+                usuarios.add(user);
                 log.info("Fetched user: {}", user);  // Log each fetched user
             }
         } catch (Exception e) {
             log.error("Error fetching users", e);
         }
-
+        System.out.print("USUARIOS     AQUI" + usuarios);
         return usuarios;
     }
 

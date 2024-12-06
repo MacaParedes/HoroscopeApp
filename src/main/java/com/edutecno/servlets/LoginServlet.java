@@ -44,8 +44,6 @@ public class LoginServlet extends HttpServlet {
 
         Usuario user = usuarioDAO.validateUser(username, password);
 
-        var usuarios =  usuarioDAO.getUsuarios();
-        log.info("USUARIO {}" , user);
         if (user != null) {
             // User is authenticated, create session
             HttpSession session = request.getSession(true);
