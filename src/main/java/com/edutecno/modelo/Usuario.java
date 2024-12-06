@@ -27,6 +27,9 @@ public class Usuario {
         this.animal = animal;
     }
 
+    public Usuario(String id, String nombre, String username, String email) {
+    }
+
     public String getId() {
         return id;
     }

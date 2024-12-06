@@ -61,7 +61,7 @@
                     <div class="col-sm-4">
                         <button type="submit" class="btn btn-custom bg-info text-white">Ingresar</button>
                     </div>
-                    <div class="col-sm-4"></div> <!-- Esto deja el espacio de la etiqueta -->
+                    <div class="col-sm-4"></div>
                 </div>
             </form>
 

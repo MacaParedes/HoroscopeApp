@@ -1,0 +1,12 @@
+<Context>
+    <Resource name="jdbc/ConexionOracle"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="-1"
+              username="HOROSCOPE_USER"
+              password="admin123"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@//localhost:1521/xepdb1" />
+</Context>
