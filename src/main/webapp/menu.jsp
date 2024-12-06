@@ -36,7 +36,6 @@
             <form action="horoscope" method="post">
                 <button type="submit">Conoce tu animal</button>
             </form>
-            <a href="horoscope.do" class="btn btn-custom bg-info text-white">Conoce tu animal</a>
         </div>
         <div class="col-auto">
             <a href="searchUser.jsp" class="btn btn-info">Buscar usuarios</a>

@@ -3,7 +3,7 @@ package com.edutecno.servlets;
 import com.edutecno.dao.UsuarioDAO;
 import com.edutecno.dao.UsuarioDAOImpl;
 import com.edutecno.modelo.Usuario;
-import com.edutecno.procesaconexion.DatabaseConnection;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

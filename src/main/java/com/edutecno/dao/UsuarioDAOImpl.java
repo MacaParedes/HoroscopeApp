@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -123,5 +124,26 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         log.info("usuarios {}", usuarios);
         return usuarios;
     }
+
+
+    @Override
+    public boolean deleteUser(String userId) {
+        String query = "DELETE FROM USUARIOS WHERE ID = ?";
+        try (Connection conn = DatabaseConnection.generaPoolConexion();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, userId);
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+
+
+
+
 
 }

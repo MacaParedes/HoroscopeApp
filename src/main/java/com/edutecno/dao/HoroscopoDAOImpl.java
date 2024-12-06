@@ -34,4 +34,7 @@ public class HoroscopoDAOImpl implements HoroscopoDAO{
         }
         return listaHoroscopo;
     }
+
+
+
 }

@@ -10,9 +10,7 @@ public interface UsuarioDAO {
     List<Usuario> getUsuarios();
     boolean createUser(Usuario user);
     List<Usuario> buscarUsuarios(String criterio);
-
-
-
+    boolean deleteUser(String userId);
 
 
 
