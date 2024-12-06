@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">Horóscopo Chino</a>
+    <div>Tu Horóscopo chino</div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="register.jsp">Regístrate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.jsp">Iniciar sesión</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container mt-4">
-    <h1 class="text-center">Manage Users</h1>
+    <h1 class="text-center">Eliminar cuenta</h1>
 
     <!-- Success/Error Messages -->
     <c:if test="${param.message != null}">
@@ -47,8 +63,13 @@
         </c:forEach>
         </tbody>
     </table>
+    <div class="text-center mt-4">
+        <a href="menu.jsp" class="btn btn-info">Volver al Menú</a>
+    </div>
 </div>
 
+
+<!-- Pie de página -->
 <footer class="text-center mt-4">
     <p>&copy; 2024 Horóscopo Chino. Todos los derechos reservados.</p>
 </footer>

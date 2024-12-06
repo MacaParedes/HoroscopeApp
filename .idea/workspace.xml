@@ -9,25 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a8c199d-a67c-4dda-bc7e-bc7f2ab092dc" name="Changes" comment="Add schema">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/updateUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateUser.jsp" afterDir="false" />
+    <list default="true" id="8a8c199d-a67c-4dda-bc7e-bc7f2ab092dc" name="Changes" comment="Add style to horoscope and search view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/dao/UsuarioDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/dao/UsuarioDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/modelo/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/servlets/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/servlets/UpdateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edutecno/dao/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edutecno/dao/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edutecno/dao/UsuarioDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edutecno/dao/UsuarioDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edutecno/modelo/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edutecno/modelo/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edutecno/servlets/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edutecno/servlets/UpdateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deleteUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/dao/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/dao/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/dao/UsuarioDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/dao/UsuarioDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/modelo/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/modelo/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/servlets/UpdateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/horoscopo-chino-1.0.0/WEB-INF/classes/com/edutecno/servlets/UpdateUserServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +332,7 @@
       <workItem from="1733437281422" duration="1342000" />
       <workItem from="1733439164037" duration="66000" />
       <workItem from="1733439251398" duration="21204000" />
-      <workItem from="1733517328241" duration="855000" />
+      <workItem from="1733517328241" duration="2364000" />
     </task>
     <task id="LOCAL-00001" summary="+entities">
       <option name="closed" value="true" />
@@ -468,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733510477332</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update User">
+      <option name="closed" value="true" />
+      <created>1733522751987</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733522751987</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add style to horoscope and search view">
+      <option name="closed" value="true" />
+      <created>1733523699894</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733523699894</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +499,9 @@
     <MESSAGE value="-Remove Procfile as is ignored by DockerFile" />
     <MESSAGE value="Upgrade java in tomcat for deploy" />
     <MESSAGE value="Add schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add schema" />
+    <MESSAGE value="Update User" />
+    <MESSAGE value="Add style to horoscope and search view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add style to horoscope and search view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -79,7 +79,9 @@
         </c:if>
     </div>
 </main>
-
+<div class="text-center mt-4">
+    <a href="menu.jsp" class="btn btn-info">Volver al Menú</a>
+</div>
 <!-- Pie de página -->
 <footer class="text-center mt-4">
     <p>&copy; 2024 Horóscopo Chino. Todos los derechos reservados.</p>
