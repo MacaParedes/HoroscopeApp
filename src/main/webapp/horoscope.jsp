@@ -6,8 +6,10 @@
     <title>Tu Horóscopo Chino</title>
 </head>
 <body>
-<h2>Hoscopo chino</h2>
-<p>Conoce a tu animal del hóroscopo chino.</p>
-<p>Tu animal es </p>
+<h1>Conoce a tu animal del horóscopo chino </h1>
+<p>Tu animal es <b> ${horoscopo.animal} </b></p>
+<p><b>Period:</b> ${horoscopo.fechaInicio} to ${horoscopo.fechaFin}</p>
+<a href="menu.jsp">Back to Menu</a>
 </body>
 </html>
+

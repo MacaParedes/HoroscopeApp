@@ -13,7 +13,7 @@ import java.util.List;
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 
-    private static final Logger log = LoggerFactory.getLogger(UsuarioDAO.class);
+    private static final Logger log = LoggerFactory.getLogger(UsuarioDAOImpl.class);
 
 
     @Override
@@ -89,4 +89,39 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         }
         return false;
     }
+
+
+    @Override
+    public List<Usuario> buscarUsuarios(String criterio) {
+        List<Usuario> usuarios = new ArrayList<>();
+        String query = "SELECT * FROM USUARIOS WHERE USERNAME LIKE ? OR EMAIL LIKE ? OR ID LIKE ?";
+        try (Connection conn = DatabaseConnection.generaPoolConexion();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            String likeCriterio = "%" + criterio + "%";
+            stmt.setString(1, likeCriterio);
+            stmt.setString(2, likeCriterio);
+            stmt.setString(3, likeCriterio);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Usuario user = new Usuario(
+                            rs.getString("ID"),
+                            rs.getString("NOMBRE"),
+                            rs.getString("USERNAME"),
+                            rs.getString("EMAIL"),
+                            rs.getDate("FECHA_NACIMIENTO"),
+                            rs.getString("PASSWORD"),
+                            rs.getString("ANIMAL")
+                    );
+                    usuarios.add(user);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        log.info("usuarios {}", usuarios);
+        return usuarios;
+    }
+
 }

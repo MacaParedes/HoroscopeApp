@@ -9,6 +9,7 @@ public interface UsuarioDAO {
     Usuario validateUser(String username, String password);
     List<Usuario> getUsuarios();
     boolean createUser(Usuario user);
+    List<Usuario> buscarUsuarios(String criterio);
 
 
 

@@ -29,16 +29,17 @@
 </nav>
 
 <header class="text-center m-0"></header>
-<main class="main-container">
+<main class="main-container m-2">
+    que quieres hacer hoy admin
     <div class="row justify-content-center">
         <div class="col-auto">
-            <a href="horoscope" class="btn btn-custom bg-info text-white">Conoce tu animal</a>
+            <form action="horoscope" method="post">
+                <button type="submit">Conoce tu animal</button>
+            </form>
+            <a href="horoscope.do" class="btn btn-custom bg-info text-white">Conoce tu animal</a>
         </div>
         <div class="col-auto">
-            <a href="register.jsp" class="btn btn-custom bg-info text-white">Regístrate</a>
-        </div>
-        <div class="col-auto">
-            <a href="searchUser" class="btn btn-custom bg-info text-white">Buscar usuarios</a>
+            <a href="searchUser.jsp" class="btn btn-info">Buscar usuarios</a>
         </div>
         <div class="col-auto">
             <a href="modifyUser" class="btn btn-custom bg-info text-white">Modificar datos</a>
@@ -49,22 +50,6 @@
     </div>
 </main>
 
-<main class="main-container">
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <button type="submit" class="btn btn-custom bg-info text-white">Conoce tu animal</button>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-custom bg-info text-white">Buscar usuarios</button>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-custom bg-info text-white">Modificar datos</button>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-custom bg-info text-white">Eliminar cuenta</button>
-        </div>
-    </div>
-</main>
 
 
 <footer>
